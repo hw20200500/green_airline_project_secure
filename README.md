@@ -6,87 +6,149 @@
 <br>
 
 ## 🚀 프로젝트 개요
-- 해당 프로젝트는 기존의 오픈소스를 바탕으로 취약점 진단 및 모의해킹을 진행하기 위해 일부 기능을 더 보안에 취약하게 수정한 프로젝트입니다.
+- 해당 프로젝트는 보안에 취약하게 제작한 green_airline_project 프로젝트를 대상으로 시큐어 코딩을 진행한 <b>안전한 버전</b>의 웹사이트 코드입니다.
 -   원래의 오픈소스 URL : https://github.com/seoyounglee0105/green_airline_project.git
-- 프로젝트 기간 : 2024년 8월 31일 ~ 
+-   취약한 버전의 웹 프로젝트 URL : https://github.com/hw20200500/green_airline_project.git
+- 프로젝트 기간 : 2024년 10월 2일 ~ 
 
 
 <br> 
 
 
 
-## 1️⃣ 프로젝트 구조
+## 1️⃣ 발견된 취약점점
+<table>
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>발견된 취약점</th>
+            <th>영향도</th>
+            <th>CVSS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01</td>
+            <td>운영체제 명령 실행</td>
+            <td>Critical</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>SQL 인젝션</td>
+            <td>Critical</td>
+            <td>9.4</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>정보 누출</td>
+            <td>Medium</td>
+            <td>5.3</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>크로스사이트 스크립팅</td>
+            <td>Critical</td>
+            <td>8.1</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>약한 문자열 강도</td>
+            <td>Medium</td>
+            <td>6.5</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>불충분한 인증</td>
+            <td>High</td>
+            <td>7.5</td>
+        </tr>
+        <tr>
+            <td>07</td>
+            <td>취약한 패스워드 복구</td>
+            <td>Medium</td>
+            <td>4.8</td>
+        </tr>
+        <tr>
+            <td>08</td>
+            <td>악성 콘텐츠</td>
+            <td>Medium</td>
+            <td>4.3</td>
+        </tr>
+        <tr>
+            <td>09</td>
+            <td>크로스사이트 리퀘스트 변조(CSRF)</td>
+            <td>High</td>
+            <td>8.0</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>불충분한 인가</td>
+            <td>High</td>
+            <td>8.2</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>자동화 공격</td>
+            <td>Medium</td>
+            <td>5.3</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>프로세스 검증 누락</td>
+            <td>High</td>
+            <td>7.2</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>파일 업로드</td>
+            <td>Critical</td>
+            <td>10.0</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>파일 다운로드</td>
+            <td>High</td>
+            <td>8.6</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>관리자 페이지 노출</td>
+            <td>Medium</td>
+            <td>5.3</td>
+        </tr>
+    </tbody>
+</table>
 
-<details>
-    <summary>⚡️ 구조 자세히 살펴보기</summary>
-    
-    📦src
-     ┗ 📂main
-       ┣ 📂java
-       ┃ ┗ 📂com
-       ┃   ┗ 📂green
-       ┃     ┗ 📂airline
-       ┃       ┃ ┣ 📂config
-       ┃       ┃ ┗ 📂controller
-       ┃       ┣ 📂dto
-       ┃       ┃ ┣ 📂kakao
-       ┃       ┃ ┣ 📂nation
-       ┃       ┃ ┣ 📂request
-       ┃       ┃ ┗ 📂response
-       ┃       ┣ 📂enums
-       ┃       ┣ 📂handler
-       ┃       ┃ ┗ 📂exception
-       ┃       ┣ 📂repository
-       ┃       ┃ ┣ 📂interfaces
-       ┃       ┃ ┗ 📂model
-       ┃       ┣ 📂service
-       ┃       ┗ 📂utils
-       ┣ 📂resources
-       ┃ ┣ 📂db
-       ┃ ┣ 📂mapper
-       ┃ ┗ 📂static
-       ┃   ┣ 📂css
-       ┃   ┃ ┗ 📂summerNote
-       ┃   ┃   ┗ 📂font
-       ┃   ┣ 📂images
-       ┃   ┃ ┣ 📂airplane
-       ┃   ┃ ┣ 📂baggage
-       ┃   ┃ ┣ 📂board
-       ┃   ┃ ┣ 📂gifticon
-       ┃   ┃ ┣ 📂in_flight
-       ┃   ┃ ┣ 📂like
-       ┃   ┃ ┣ 📂product
-       ┃   ┃ ┗ 📂ticket
-       ┃   ┗ 📂js
-       ┃     ┗ 📂summerNote
-       ┃       ┗ 📂lang
-       ┗ 📂webapp
-         ┗ 📂WEB-INF
-           ┗ 📂view
-             ┣ 📂baggage
-             ┣ 📂board
-             ┣ 📂faq
-             ┣ 📂in_flight
-             ┣ 📂layout
-             ┣ 📂manager
-             ┣ 📂mileage
-             ┣ 📂myPage
-             ┣ 📂notice
-             ┣ 📂ticket
-             ┣ 📂user
-             ┗ 📂voc
-
-    
-</details>
     
 <br>
 
-## 2️⃣ 프로젝트 개요
+## 2️⃣ 시큐어 코딩 결과
 
-* 프로젝트 목표 : 웹 취약점 진단 및 모의해킹
-* 예약, 환불, 외부 API를 활용할 수 있는 항공권 예약 사이트
-* 기존의 오픈소스에서 챗봇 기능을 추가
+01. 운영체제 명령 실행
+   - 수정 대상 : app.py
+   ![image](https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff)
 
+02. SQL 인젝션
+   - 수정 대상 : src\main\resources\mapper\*.xml
+   - 기존의 동적 파라미터 바인딩(예: '&{keyword}')에서 정적 파라미터 바인딩(예: #{keyword})으로 변경
+
+     [수정 결과]
+     ![image](https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105)
+
+03. 정보 누출
+   - 수정 대상 : src/main/java/com/green/airline/handler/GlobalExceptionHandler.java
+   - 모든 오류에 대해서 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경
+
+04. XSS
+   - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java
+   - 'tringEscapeUtils.escapeHtml()'을 이용하여 모든 입력한 값을 단순 문자열로 저장되도록 변경
+
+     [수정 결과]
+     ![image](https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686)
+
+05. 약한 문자열 강도
+   - 수정 대상 : 
 
 <br>
 
