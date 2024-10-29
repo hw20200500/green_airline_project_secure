@@ -59,14 +59,14 @@ public class UserService {
 	public User readUserByIdAndPassword(LoginFormDto loginFormDto) {
 		User userEntity = userRepository.selectById(loginFormDto);
 		if (userEntity == null) {
-			throw new CustomRestfullException("아이디가 존재하지 않습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+			throw new CustomRestfullException("아이디 또는 비밀번호가 일치하지 않습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
 		// 암호화 처리
 		boolean isPwdMatched = passwordEncoder.matches(loginFormDto.getPassword(), userEntity.getPassword());
 
 		if (isPwdMatched == false) {
-			throw new CustomRestfullException("비밀번호가 틀렸습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+			throw new CustomRestfullException("아이디 또는 비밀번호가 일치하지 않습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
 		// 로그인 할 때 마일리지 조회 해서 등급 결정

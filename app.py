@@ -7,7 +7,7 @@ from flask_cors import CORS  # 추가된 부분
 import json
 
 app = Flask(__name__)
-CORS(app, supports_credentials=True, resources={r"/get_response": {"origins": "http://localhost:80"}})  # CORS 설정
+CORS(app, supports_credentials=True, resources={r"/get_response": {"origins": "https://localhost"}})  # CORS 설정
 
 # 간단한 챗봇 응답 함수
 def chatbot_response(user_input):
@@ -139,9 +139,7 @@ def get_response():
 
     # 매우 취약한 코드: 사용자 입력을 필터링 없이 템플릿으로 렌더링
     # 취약점: 사용자 입력을 필터링 없이 템플릿으로 렌더링
-    bot_response = chatbot_response(
-        render_template_string(user_message, subprocess=subprocess)
-    )
+    bot_response = chatbot_response(render_template(user_message))
 
     # UTF-8 인코딩으로 응답 생성
     response_data = json.dumps({"response": bot_response}, ensure_ascii=False)

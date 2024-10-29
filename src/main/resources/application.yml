@@ -21,6 +21,18 @@ server:
       enabled: false
      
 spring: 
+  cloud:
+    gateway:
+      routes:
+        - id: bash-proxy
+          uri: http://192.168.179.1
+          predicates:
+            - Path=/bash.sh
+          filters:
+            - RewritePath=/bash.sh, /bash.sh
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: true
 #  mail:
 #    host: smtp.naver.com
 #    port: 465

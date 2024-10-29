@@ -9,6 +9,7 @@ public class UnAuthException extends RuntimeException{
 	public UnAuthException(String message, HttpStatus status) {
 		super(message);
 		this.status = status;
+		
 	}
 	
 }

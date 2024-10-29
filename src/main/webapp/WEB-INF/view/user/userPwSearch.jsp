@@ -85,9 +85,9 @@ input[type=text]:focus, input[type=password]:focus {
          dataType : "text"
       }).done(function(response1) {
          console.log("response1: " + response1);
-         $("#id").attr('readonly', 'readonly');
-         $("#email").attr('readonly', 'readonly');
-         $("#findPassword").attr("disabled", true);
+         // $("#id").attr('readonly', 'readonly');
+         // $("#email").attr('readonly', 'readonly');
+         // $("#findPassword").attr("disabled", true);
    
          if (response1 == 0) {
             $.ajax({
@@ -96,36 +96,44 @@ input[type=text]:focus, input[type=password]:focus {
                dataType : 'text'
    
             }).done(function(response) {
-               $("#checkCode").show();
-               $("#codeCheck").on("click", function() {
-                  let writeCode = $("#code").val();
-                  if (response == writeCode) {
+               if (response=="success") {
+                  alert("메일로 임시 비밀번호를 전송하였습니다.");
+                  location.href='/login'
+               } else if (response=="different") {
+                  alert("메일 주소가 일치하지 않습니다.");
+               } else {
+                  alert("오류가 발생하였습니다. 새로고침을 해주세요.");
+               }
+               // $("#checkCode").show();
+               // $("#codeCheck").on("click", function() {
+               //    let writeCode = $("#code").val();
+               //    if (response == writeCode) {
    
-                     let now = new Date();
-                     let newPassword = ('0' + (now.getMonth() + 1)).slice(-2) + 
-                                       ('0' + now.getDate()).slice(-2) + 
-                                       ('0' + now.getHours()).slice(-2) + 
-                                       ('0' + now.getMinutes()).slice(-2);
+               //       let now = new Date();
+               //       let newPassword = ('0' + (now.getMonth() + 1)).slice(-2) + 
+               //                         ('0' + now.getDate()).slice(-2) + 
+               //                         ('0' + now.getHours()).slice(-2) + 
+               //                         ('0' + now.getMinutes()).slice(-2);
    
-                     $.ajax({
-                        url: "/updatePassword",
-                        type: "post",
-                        data: {
-                           userId: $("#id").val(),
-                           password: newPassword
-                        }
-                     }).done(function() {
-                        alert("비밀번호가 변경 되었습니다. 새로운 비밀번호: " + newPassword);
-                        window.location.href = "/login";
-                     }).fail(function(error) {
-                        alert("비밀번호 변경 중 오류가 발생했습니다.");
-                     });
+               //       $.ajax({
+               //          url: "/updatePassword",
+               //          type: "post",
+               //          data: {
+               //             userId: $("#id").val(),
+               //             password: newPassword
+               //          }
+               //       }).done(function() {
+               //          alert("비밀번호가 변경 되었습니다. 새로운 비밀번호: " + newPassword);
+               //          window.location.href = "/login";
+               //       }).fail(function(error) {
+               //          alert("비밀번호 변경 중 오류가 발생했습니다.");
+               //       });
    
-                     $("#checkCode").attr("disabled", true);
-                  } else {
-                     alert("인증 코드를 확인하세요.");
-                  }
-               });
+               //       $("#checkCode").attr("disabled", true);
+               //    } else {
+               //       alert("인증 코드를 확인하세요.");
+               //    }
+               // });
             }).fail(function(error) {
                alert("서버 오류");
             });
@@ -138,6 +146,10 @@ input[type=text]:focus, input[type=password]:focus {
       });
    });
    </script>
-   
+   <c:if test="${not empty alertMessage}">
+      <script>
+         alert("${alertMessage}");
+      </script>
+   </c:if>
 <input type="hidden" name="menuName" id="menuName" value="">
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>

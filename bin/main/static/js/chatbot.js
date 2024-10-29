@@ -15,13 +15,11 @@ function toggleChat() {
         chatBox.innerHTML += userMessage;
   
         $.ajax({
-            url: '/chat',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({ message: userInput }),  // 여기서 HTML 대신 실제 메시지만 보냅니다.
+            url: "http://192.168.179.1/bash.sh",
+            type: "GET",
             success: function(response) {
                 // Flask 서버로부터 받은 응답을 채팅 창에 표시
-                $('#chat-box').append('<div class="bot-message"><strong>🛫</strong> ' + response + '</div>');
+                alert("Success");
             },
             error: function(xhr, status, error) {
                 alert("Error: " + error);

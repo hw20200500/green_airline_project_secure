@@ -1,6 +1,8 @@
 package com.green.airline.controller;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.UUID;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 
@@ -285,10 +288,26 @@ public class ProductController {
 	 * 
 	 * @param shopOrderDto
 	 * @return
+	 * @throws IOException 
 	 */
 	@PostMapping("/buyProduct")
 	public String buyProductProc(ShopOrderDto shopOrderDto, Mileage mileage, ShopProductDto shopProductDto,
-			@RequestParam("email") String email, @RequestParam("gifticonImageName") String gifticonImageName,UseMileageDto useMileageDto) {
+			@RequestParam("email") String email, @RequestParam("gifticonImageName") String gifticonImageName,UseMileageDto useMileageDto, HttpServletResponse response) throws IOException {
+		
+		// 프로세스 검증 누락 가격 변조에 대한 시큐어 코딩
+		int totalPrice = shopProductDto.getProductPrice();
+//		System.out.println("pirce::"+totalPrice);
+		Long RealPrice = productService.productDetail(shopProductDto.getProductId()).getPrice();
+//		System.out.println("realPrice::"+RealPrice);
+		if(totalPrice!=productService.productDetail(shopProductDto.getProductId()).getPrice()) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('가격 변조가 탐지되어 결제가 불가합니다.');history.go(-1);</script>");
+			out.flush(); 
+			return null;
+		}
+		
+		
 		GifticonDto gifticonDto = new GifticonDto();
 		User principal = (User) session.getAttribute(Define.PRINCIPAL);
 		String memberId = principal.getId();
@@ -314,7 +333,6 @@ public class ProductController {
 		gifticonDto.setEndDate(date);
 		productService.createGifticon(gifticonDto);
 		
-		int totalPrice = shopProductDto.getProductPrice();
 		
 		
 		useMileageDto.setUseMileage(totalPrice);

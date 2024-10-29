@@ -166,6 +166,7 @@ public class UserController {
 	@PostMapping("/login")
 	public String loginProc(LoginFormDto loginFormDto) {
 		User principal = userService.readUserByIdAndPassword(loginFormDto);
+		System.out.println("principal::"+principal);
 		if (principal != null && principal.getStatus() == 0) {
 			session.setAttribute(Define.PRINCIPAL, principal);
 			if (principal.getUserRole().equals("관리자")) {
@@ -559,6 +560,7 @@ public class UserController {
 	 */
 	@PostMapping("/updatePassword")
 	public String updatePasswordById(String password, String userId) {
+		System.out.println("변경된 비밀번호::"+password);
 		userService.updateyPassword(password, userId);
 		return "/user/login";
 	}

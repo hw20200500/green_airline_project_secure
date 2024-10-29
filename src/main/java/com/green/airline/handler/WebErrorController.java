@@ -8,7 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.green.airline.handler.exception.UnAuthException;
 
 /**
  * @author 치승
@@ -38,4 +42,15 @@ public class WebErrorController implements ErrorController {
 		}
 		return "layout/errorPage";
 	}
+	
+	@ExceptionHandler(UnAuthException.class)
+    public ModelAndView handleUnAuthException(HttpServletRequest request, UnAuthException ex) {
+        // ModelAndView를 사용해 HTML 오류 페이지로 리다이렉트
+        ModelAndView modelAndView = new ModelAndView("layout/errorPage"); // 로그인 필요 페이지
+        modelAndView.addObject("error", "Unauthorized");
+        modelAndView.addObject("message", ex.getMessage());
+        modelAndView.setStatus(HttpStatus.UNAUTHORIZED); // 또는 ex.getStatus()로 설정 가능
+        return modelAndView;
+    }
+	
 }

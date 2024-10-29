@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
@@ -25,6 +26,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.util.HtmlUtils;
 
 import com.green.airline.dto.BoardDto;
 import com.green.airline.dto.BoardUpdateDto;
@@ -159,7 +161,10 @@ public class BoardController {
 				e.printStackTrace();
 			}
 		}
-
+		String title=boardDto.getTitle();
+		String content=boardDto.getContent();
+		boardDto.setTitle(StringEscapeUtils.escapeHtml(title));
+		boardDto.setContent(StringEscapeUtils.escapeHtml(content));
 		boardService.insertByBoard(boardDto);
 
 		return "redirect:/board/list/1";

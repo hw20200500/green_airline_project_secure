@@ -1,5 +1,7 @@
 package com.green.airline.repository.interfaces;
 
+import java.util.Optional;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,7 +16,7 @@ public interface UserRepository {
 
 	// 로그인 기능
 	public User selectByIdAndPassword(LoginFormDto loginFormDto);
-
+	
 	// 암호화 처리에 사용
 	public User selectById(LoginFormDto loginFormDto);
 	

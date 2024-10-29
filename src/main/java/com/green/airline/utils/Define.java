@@ -53,8 +53,8 @@ public class Define {
 	// 로그인이 필요한 경로
 	public final static String[] PATHS = {"/userMain", "/ticket/selectSeat/**", "/ticket/payment/**", "/ticket/list/**",
 			"/inFlightService/inFlightSpecialReq", "/baggage/myBaggageReq", "/gifticon/list", "/voc/**", "/manager/**"
-			, "/product/registration"};
+			, "/product/registration", "/notice/write", "/notice/noticeDelete","/notice/noticeUpdate"};
 	// 매니저만 접근 가능한 경로
-	public final static String[] MANAGER_PATHS = {"/manager/**", "/product/registration"};
+	public final static String[] MANAGER_PATHS = {"/manager/**", "/product/registration", "/notice/noticeUpdate", "/notice/noticeDelete", "/notice/write", "/voc/list/not/**", "/voc/list/processed/**"};
 	
 }

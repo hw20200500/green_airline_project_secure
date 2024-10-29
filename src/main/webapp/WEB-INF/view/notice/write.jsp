@@ -154,5 +154,4 @@ input[type=text]:focus {
 				});
 	</script>
 </div>
-
 <%@ include file="/WEB-INF/view/layout/footer.jsp"%>

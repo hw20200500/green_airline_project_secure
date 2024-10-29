@@ -1,11 +1,35 @@
 package com.green.airline.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.apache.tomcat.websocket.WsFrameClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.green.airline.dto.response.ResponseDto;
+import com.green.airline.handler.exception.CustomRestfullException;
+import com.green.airline.repository.interfaces.MemberRepository;
+import com.green.airline.repository.interfaces.UserRepository;
 import com.green.airline.repository.model.User;
 import com.green.airline.service.EmailService;
 import com.green.airline.service.UserService;
@@ -16,18 +40,29 @@ public class UserApiController {
 	private UserService userService;
 	@Autowired
 	private EmailService emailService;
-
+	@Autowired
+	private MemberRepository memberRepository;
+	
+	private User user;
 	@GetMapping("/sendNewPw")
-	public String sendNewPw(@RequestParam("email") String email) {
+	public String sendNewPw(@RequestParam("email") String email, RedirectAttributes redirectAttributes) {
 		String code = null;
 		try {
+			String realEmail = memberRepository.findEmailById(user.getId());
+			
+			if (!realEmail.equals(email)) {
+				System.out.println("실제 email::"+realEmail);
+	            return "different"; // 현재 페이지로 리다이렉트
+			}
 			code = emailService.sendPwCodeMessage(email);
 			System.out.println("인증코드 : " + code);
+			
+			userService.updateyPassword(code, user.getId());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		return code;
+		return "success";
 	}
 
 	/*
@@ -43,7 +78,7 @@ public class UserApiController {
 	public int sendNewPw1(@RequestParam("id") String id) {
 		int result = 1;
 		System.out.println("id : " + id);
-		User user = userService.readByid(id);
+		user = userService.readByid(id);
 		if (user.getId() != id) {
 			result = 0;
 		}

@@ -19,6 +19,9 @@ public interface MemberRepository {
 	// 카카오 로그인 api에 쓸 것
 	public SocialDto selectBySocialUserInfo(String id);
 
+	//이메일 정보 확인
+		public String findEmailById(String id);
+		
 	// 일반 회원가입 처리
 	public int insertMember(JoinFormDto joinFormDto);
 

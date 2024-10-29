@@ -190,7 +190,11 @@
 				</div>
 			</div>
 		</c:if>
-
+		<c:if test="${not empty alertMessage}">
+			<script>
+				alert("${alertMessage}");
+			</script>
+		</c:if>
 <script>
 	let userRole = `${principal.userRole}`;
 </script>

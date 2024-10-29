@@ -11,22 +11,32 @@ import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMessage.RecipientType;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts.taglib.html.ImgTag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.HttpStatus;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
+import com.green.airline.handler.exception.CustomRestfullException;
+import com.green.airline.repository.interfaces.BoardRepository;
+import com.green.airline.repository.interfaces.UserRepository;
+import com.green.airline.repository.model.User;
+import com.green.airline.utils.Define;
+
 @Service
 public class EmailService {
    @Autowired
    JavaMailSender emailsender;
-
+   @Autowired
+	private HttpSession session;
+   
    private String ePw; // 인증번호
 
    // 이미지 파일을 Base64 인코딩하여 데이터 URI로 변환하는 메서드
@@ -83,9 +93,10 @@ public class EmailService {
       MimeMessage message = emailsender.createMimeMessage();
       MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
       
+      
       // 수신자와 발신자 설정
       helper.setTo(to); // 받는 사람
-      helper.setFrom(new InternetAddress("ljh3364@naver.com", "그린항공")); // 발신자 명시
+      helper.setFrom(new InternetAddress("loobis200172@naver.com", "그린항공")); // 발신자 명시
 
       helper.setSubject("그린항공 비밀번호 찾기 이메일 인증");// 제목
 
