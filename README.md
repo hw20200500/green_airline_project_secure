@@ -158,11 +158,11 @@
        </table>
 
 
-
+<br><br>
 <h3>03. 정보 누출</h3>
    - 수정 대상 : src/main/java/com/green/airline/handler/GlobalExceptionHandler.java
    - 모든 오류에 대해서 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경
-<br>
+<br><br>
 <h3>04. XSS</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java
    - 'tringEscapeUtils.escapeHtml()'을 이용하여 모든 입력한 값을 단순 문자열로 저장되도록 변경
@@ -179,10 +179,10 @@
        </table>
 
 
-     
+     <br><br>
 <h3>05. 약한 문자열 강도</h3>
    - 수정 대상 : 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -195,11 +195,11 @@
            </tr>
        </table>
 
-
+<br><br>
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
    - 수정 대상 : src/main/java/com/green/airline/utils/Define.java
    - 관리자로 로그인 후 접근할 수 있는 페이지 목록에 공지사항 게시글 작성(/notice/write), 수정(/notice/noticeUpdate), 삭제(/notice/noticeDelete), 관리자만 접근 가능한 전체 고객의 말씀 게시글 목록(/voc/list/not/*, /voc/list/processed/*) URI 추가 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -212,11 +212,11 @@
        </table>
 
 
-
+<br><br>
 <h3>07. 취약한 패스워드 복구</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/UserApiController.java, src/main/webapp/WEB-INF/view/user/userPwSearch.jsp
    - 기존의 이메일 인증한 뒤, jsp에서 자바스크립트로 약한 문자열로 임시 비밀번호로 발급해주는 것에서 자바 백엔드에서 사용자 이메일 주소 입력하면 랜덤 문자열로 임시 비밀번호 발급해주는 것으로 변경
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -229,11 +229,11 @@
        </table>
 
 
-
+<br><br>
 <h3>08. 악성 콘텐츠, 13. 파일 업로드</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/controller/ImageUploadController.java
    - 모든 유형의 파일이 업로드 가능했던 과거와 다르게, jpg, png, jpeg만 업로드 가능하도록 수정 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -246,10 +246,10 @@
        </table>
 
 
-
+<br><br>
 <h3>11. 자동화 공격</h3>
    - 수정 대상 : 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -263,11 +263,11 @@
        </table>
 
 
-
+<br><br>
 <h3>12. 프로세스 검증 누락</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/ProductController.java
    - /buyProduct에 접근할 때, DB에 저장된 실제 물품 가격과 전달받은 구매 물품의 가격이 일치하지 않으면 '가격 변조가 탐지되어 결제가 불가합니다.'라는 경고창 출력 후 결제 프로세스 중단하도록 수정 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -278,10 +278,10 @@
                <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
            </tr>
        </table>
-
+<br><br>
 <h3>14. 파일 다운로드</h3>
    - 수정 대상 : 
-
+<br>
    <table>
            <tr>
                <td>수정 전</td>
