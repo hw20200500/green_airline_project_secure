@@ -146,12 +146,12 @@
 
 <table width="100%" border-collapse="collapse">
     <tr>
-        <th width="50%" vertical-align="middle">수정 전</th>
-        <th width="50%" vertical-align="middle">수정 후</th>
+        <th width="100%" vertical-align="middle">수정 전</th>
+        <th width="100%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758" alt="Before Change"></td>
-        <td width="50%" vertical-align="middle">수정 후 이미지</td>
+        <td width="100%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758" alt="Before Change"></td>
+        <td width="100%" vertical-align="middle">수정 후 이미지</td>
     </tr>
 </table>
 
