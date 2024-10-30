@@ -142,6 +142,7 @@
    </table>
    
 
+<br><br>
 <h3>02. SQL 인젝션</h3>
    - 수정 대상 : src\main\resources\mapper\*.xml
    - 기존의 동적 파라미터 바인딩(예: '&{keyword}')에서 정적 파라미터 바인딩(예: #{keyword})으로 변경
@@ -162,12 +163,13 @@
 <h3>03. 정보 누출</h3>
    - 수정 대상 : src/main/java/com/green/airline/handler/GlobalExceptionHandler.java
    - 모든 오류에 대해서 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경
+   
 <br><br>
 <h3>04. XSS</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java
    - 'tringEscapeUtils.escapeHtml()'을 이용하여 모든 입력한 값을 단순 문자열로 저장되도록 변경
 <br>
-<div>
+
     <table>
            <tr>
                <td>수정 전</td>
@@ -178,7 +180,8 @@
                <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/></td>
            </tr>
        </table>
-</div>
+
+
 
 <br><br>
 <h3>05. 약한 문자열 강도</h3>
@@ -196,6 +199,8 @@
            </tr>
        </table>
 
+
+
     <br><br>
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
    - 수정 대상 : src/main/java/com/green/airline/utils/Define.java
@@ -211,6 +216,7 @@
                <td><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243"/></td>
            </tr>
        </table>
+
 
 
 <br><br>
@@ -230,6 +236,8 @@
        </table>
 
 
+
+
 <br><br>
 <h3>08. 악성 콘텐츠, 13. 파일 업로드</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/controller/ImageUploadController.java
@@ -245,6 +253,8 @@
                <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
            </tr>
        </table>
+
+
 
 
 <br><br>
@@ -264,6 +274,8 @@
        </table>
 
 
+
+
 <br><br>
 <h3>12. 프로세스 검증 누락</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/ProductController.java
@@ -279,6 +291,8 @@
                <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
            </tr>
        </table>
+
+
 
        
 <br><br>
