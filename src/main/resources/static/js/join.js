@@ -53,11 +53,15 @@ $(document).ready(function() {
                     contentType: "application/json; charset=utf-8"
                 }).done(function(data) {
                     console.log("isCheck value after request:", isCheck);
-                    if (data) {
+                    if (data=="true") {
                         alert("사용 가능한 아이디입니다.");
                         isCheck = 1;
-                    } else {
+                    } else if(data=="false") {
                         alert("중복된 아이디입니다.");
+                        $("#member--id").focus();
+                        isCheck = 0;
+                    } else {
+                        alert("연속된 글자로 된 아이디는 사용할 수 없습니다.");
                         $("#member--id").focus();
                         isCheck = 0;
                     }

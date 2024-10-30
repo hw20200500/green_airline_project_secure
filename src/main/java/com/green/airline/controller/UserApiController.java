@@ -86,14 +86,41 @@ public class UserApiController {
 	}
 
 	@GetMapping("/existsById")
-	public boolean existsById(@RequestParam String id) {
+	public String existsById(@RequestParam String id) {
 		User userId = userService.readUserById(id);
-
+		// 연속된 알파벳 혹은 숫자가 사용될 경우 아이디 인증 안됨.
+		if (isSequential(id)) {
+			return "continuous";
+        }
 		if (userId == null) {
-			return true;
+			return "true";
 		} else {
-			return false;
+			return "false";
 		}
 	}
+	
+	private static boolean isSequential(String id) {
+		// 연속된 알파벳 혹은 숫자가 사용될 경우 아이디 인증 안됨.
+        return isSequentialNumbers(id) || isSequentialAlphabets(id);
+    }
+	private static boolean isSequentialNumbers(String id) {
+        // 연속된 숫자 체크
+        for (int i = 0; i < id.length() - 1; i++) {
+            if (id.charAt(i) + 1 != id.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isSequentialAlphabets(String id) {
+        // 연속된 알파벳 체크
+        for (int i = 0; i < id.length() - 1; i++) {
+            if (id.charAt(i) + 1 != id.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 	
 }

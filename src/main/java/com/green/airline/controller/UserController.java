@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -252,12 +253,61 @@ public class UserController {
 			return "/user/join";
 		}
 
+		
+		String password = joinFormDto.getPassword();
+		if (password.length() < 8) {
+			throw new CustomRestfullException("비밀번호는 8글자 이상이어야 합니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+		if (isSequential(password)) {
+			throw new CustomRestfullException("연속된 숫자 혹은 알파벳으로 구성된 비밀번호는 사용할 수 없습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+		if (!hasSpecialCharacter(password) || !hasAlphabet(password) || !hasDigit(password)) {
+			throw new CustomRestfullException("비밀번호는 특수문자, 숫자, 알파벳을 모두 포함해야 합니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		if (password.contains(joinFormDto.getId())) {
+			throw new CustomRestfullException("비밀번호에 아이디와 동일한 글자가 포함되어 있습니다.", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		// 몰라 입력받은 id와 원래 있는 아이디가 같다면 회원가입 안 되도록 예외처리
 
 		userService.createMember(joinFormDto);
 
 		return "redirect:/login";
 	}
+	private static boolean hasSpecialCharacter(String password) {
+        return Pattern.compile("[^a-zA-Z0-9]").matcher(password).find();
+    }
+
+    private static boolean hasAlphabet(String password) {
+        return Pattern.compile("[a-zA-Z]").matcher(password).find();
+    }
+
+    private static boolean hasDigit(String password) {
+        return Pattern.compile("[0-9]").matcher(password).find();
+    }
+	private static boolean isSequential(String id) {
+        return isSequentialNumbers(id) || isSequentialAlphabets(id);
+    }
+	private static boolean isSequentialNumbers(String id) {
+        // 연속된 숫자 체크
+        for (int i = 0; i < id.length() - 1; i++) {
+            if (id.charAt(i) + 1 != id.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean isSequentialAlphabets(String id) {
+        // 연속된 알파벳 체크
+        for (int i = 0; i < id.length() - 1; i++) {
+            if (id.charAt(i) + 1 != id.charAt(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 	@GetMapping("/apiSocialJoin")
 	public String apiSocialJoinPage(@RequestParam(name = "id") String id,

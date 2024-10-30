@@ -81,7 +81,6 @@ button.addEventListener('click', () => {
     // URL에 쿼리 파라미터를 추가합니다.
     const url = new URL('/board/download', window.location.origin);
     url.searchParams.append('id', boardId);
-    url.searchParams.append('fileName', fileName);
 
     fetch(url, { // 수정된 URL 사용
         method: 'GET',

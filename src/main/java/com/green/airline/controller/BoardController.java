@@ -309,17 +309,20 @@ public class BoardController {
 
 	}*/
 	@GetMapping("/download")
-	public ResponseEntity<FileSystemResource> fileDownload(@RequestParam("fileName") String fileName)
+	public ResponseEntity<FileSystemResource> fileDownload(@RequestParam("id") Integer id)
 	        throws UnsupportedEncodingException {
 	    
 	    // 파일 경로 수정: webapp에서 상위 경로 접근을 허용하도록 절대 경로를 사용할 수 있게 함
 	    String filePath;
 	    
+	    BoardDto boardDto = boardRepository.selectByBoardDetail(id);
+	    String fileName = boardDto.getFileName();
 	    // 특정 경로를 대체하는 처리 (예: /uploadImage -> /images/upload)
 	    fileName = fileName.replace("/uploadImage/", "src/main/webapp/images/upload/");
-
-//	    fileName = context.getRealPath(fileName);
-	 // 경로를 명시적으로 설정하여 webapp 상위 폴더 접근을 허용
+	    System.out.println("filename::"+fileName);
+//
+////	    fileName = context.getRealPath(fileName);
+//	 // 경로를 명시적으로 설정하여 webapp 상위 폴더 접근을 허용
         filePath = Paths.get("").toAbsolutePath().toString() + File.separator + fileName;
         System.out.println("filePath::" + filePath);
 
