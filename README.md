@@ -10,7 +10,7 @@
 -   원래의 오픈소스 URL : https://github.com/seoyounglee0105/green_airline_project.git
 -   취약한 버전의 웹 프로젝트 URL : https://github.com/hw20200500/green_airline_project.git
 - 프로젝트 기간 : 2024년 10월 2일 ~ 10월 30일
-- 해당 시큐어 코딩은 **KISA의 『주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드』**에 언급된 Web 취약점 점검 항목 및 보안설정 방법을 바탕으로 진행하였습니다.
+- 해당 시큐어 코딩은 ** KISA의 『주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드』 **에 언급된 Web 취약점 점검 항목 및 보안설정 방법을 바탕으로 진행하였습니다.
 
 
 <br> 
