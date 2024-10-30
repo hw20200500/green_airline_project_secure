@@ -124,21 +124,6 @@
 <br>
 
 ## 2️⃣ 시큐어 코딩 결과
-<head>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td {
-            width: 50%;
-            text-align: center;
-            vertical-align: middle;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-    </style>
-</head>
 <h3>01. 운영체제 명령 실행</h3>
 <p>- 수정 대상: app.py</p>
 <p>Flask의 render_template_string을 render_template으로 변경</p>
@@ -154,7 +139,7 @@
         <td width="50%" vertical-align="middle">수정 후 이미지</td>
     </tr>
 </table>
-
+<br>
 <h3>02. SQL 인젝션</h3>
 <p>- 수정 대상: src\main\resources\mapper\*.xml</p>
 <p>기존의 동적 파라미터 바인딩(예: '&{keyword}')에서 정적 파라미터 바인딩(예: #{keyword})으로 변경</p>
@@ -169,11 +154,11 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105" alt="After Change SQL Injection"></td>
     </tr>
 </table>
-
+<br>
 <h3>03. 정보 누출</h3>
 <p>- 수정 대상: src/main/java/com/green/airline/handler/GlobalExceptionHandler.java</p>
 <p>모든 오류에 대해 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경</p>
-
+<br>
 <h3>04. XSS</h3>
 <p>- 수정 대상: src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java</p>
 <p>‘StringEscapeUtils.escapeHtml()’을 이용하여 모든 입력값을 단순 문자열로 저장되도록 변경</p>
@@ -188,7 +173,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change XSS"></td>
     </tr>
 </table>
-
+<br>
 <h3>05. 약한 문자열 강도</h3>
 <p>- 수정 대상: </p>
 
@@ -202,7 +187,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change Weak String"></td>
     </tr>
 </table>
-
+<br>
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
 <p>- 수정 대상: src/main/java/com/green/airline/utils/Define.java</p>
 <p>관리자로 로그인 후 접근할 수 있는 페이지 목록에 공지사항 게시글 작성(/notice/write), 수정(/notice/noticeUpdate), 삭제(/notice/noticeDelete), 관리자만 접근 가능한 전체 고객의 말씀 게시글 목록(/voc/list/not/*, /voc/list/processed/*) URI 추가</p>
@@ -217,7 +202,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243" alt="After Change Insufficient Authorization"></td>
     </tr>
 </table>
-
+<br>
 <h3>07. 취약한 패스워드 복구</h3>
 - 수정 대상 : src/main/java/com/green/airline/controller/UserApiController.java, src/main/webapp/WEB-INF/view/user/userPwSearch.jsp
 - 기존의 이메일 인증한 뒤, jsp에서 자바스크립트로 약한 문자열로 임시 비밀번호를 발급해주는 방식에서 자바 백엔드에서 랜덤 문자열로 임시 비밀번호를 발급하는 방식으로 변경
@@ -232,7 +217,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/></td>
     </tr>
 </table>
-
+<br>
 <h3>08. 악성 콘텐츠, 13. 파일 업로드</h3>
 - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/controller/ImageUploadController.java
 - 모든 유형의 파일이 업로드 가능했던 기존 방식에서 jpg, png, jpeg 파일만 업로드 가능하도록 수정
@@ -247,7 +232,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
     </tr>
 </table>
-
+<br>
 <h3>11. 자동화 공격</h3>
 <p>- 수정 대상 :</p>
 <br>
@@ -261,7 +246,7 @@
         <td width="50%" vertical-align="middle"><img src=""/></td>
     </tr>
 </table>
-
+<br>
 <h3>12. 프로세스 검증 누락</h3>
 - 수정 대상 : src/main/java/com/green/airline/controller/ProductController.java
 - /buyProduct에 접근할 때, DB에 저장된 실제 물품 가격과 전달받은 구매 물품의 가격이 일치하지 않으면 '가격 변조가 탐지되어 결제가 불가합니다.'라는 경고창 출력 후 결제 프로세스 중단하도록 수정
@@ -276,7 +261,7 @@
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
     </tr>
 </table>
-
+<br>
 <h3>14. 파일 다운로드</h3>
 - 수정 대상 :
 <br>
