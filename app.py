@@ -137,8 +137,7 @@ def get_response():
     # user_message = request.form["message"]
     user_message = request.json.get('message', '')
 
-    # 매우 취약한 코드: 사용자 입력을 필터링 없이 템플릿으로 렌더링
-    # 취약점: 사용자 입력을 필터링 없이 템플릿으로 렌더링
+    # 기존의 render_template_string 대신에 render_template로 변경해 SSTI 차단
     bot_response = chatbot_response(render_template(user_message))
 
     # UTF-8 인코딩으로 응답 생성

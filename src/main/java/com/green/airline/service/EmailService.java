@@ -61,7 +61,7 @@ public class EmailService {
       
       // 수신자와 발신자 설정
       helper.setTo(to); // 받는 사람
-      helper.setFrom(new InternetAddress("ljh3364@naver.com", "그린항공")); // 발신자 명시
+      helper.setFrom(new InternetAddress("loobis200172@naver.com", "그린항공")); // 발신자 명시
 
       helper.setSubject("그린항공 기프티콘샵");// 제목
       
@@ -98,14 +98,14 @@ public class EmailService {
       helper.setTo(to); // 받는 사람
       helper.setFrom(new InternetAddress("loobis200172@naver.com", "그린항공")); // 발신자 명시
 
-      helper.setSubject("그린항공 비밀번호 찾기 이메일 인증");// 제목
+      helper.setSubject("그린항공 임시 비밀번호 발급 안내");// 제목
 
       String htmlContent = "<div style='margin:30px; border: 1px solid #ccc; padding:50px;width:500px; '>";
-      htmlContent += "<h1>GREEN AIRlines 이메일 인증 안내</h1>";
+      htmlContent += "<h1>GREEN AIRlines 임시 비밀번호 발급 안내</h1>";
       htmlContent += "<br>";
-      htmlContent += "<p>'비밀번호 찾기'를 위해 이메일 인증을 진행합니다.</p>";
-      htmlContent += "<p>아래 발급된 이메일 인증번호를 복사하거나 직접 입력하여 인증을 완료해주세요.</p>";
-      htmlContent += "<h3>회원가입 인증 코드입니다.</h3>";
+      htmlContent += "<p>그린항공에서 임시 비밀번호가 발급되었습니다.</p>";
+      htmlContent += "<p>아래 발급된 임시 비밀번호로 로그인 후, 비밀번호 재설정을 진행해주세요.</p>";
+      htmlContent += "<h3>임시 비밀번호</h3>";
       htmlContent += "<p style='color:blue;font-weight: bold;'>" + ePw + "</p>";
       htmlContent += "<div style='font-size:130%'></div>";
 

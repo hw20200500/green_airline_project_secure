@@ -4,48 +4,52 @@ import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;
 import org.apache.catalina.valves.ErrorReportValve;
 
-import java.io.IOException;
-import java.util.regex.Pattern;
-
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.File;
 
 public class CustomErrorReportValve extends ErrorReportValve {
 
-    // 포맷 문자열을 찾기 위한 정규 표현식
-    private static final Pattern FORMAT_STRING_PATTERN = Pattern.compile("%[sdnfx]");
-
     @Override
     protected void report(Request request, Response response, Throwable throwable) {
-        String requestURI = request.getRequestURI();
-
         HttpServletResponse httpResponse = (HttpServletResponse) response;
-        
-        // 포맷 스트링이 있는지 확인
-        if (FORMAT_STRING_PATTERN.matcher(requestURI).find()) {
+
+        // Check if the HTTP status is 400
+        if (httpResponse.getStatus() == HttpServletResponse.SC_BAD_REQUEST) {
             try {
-                // 포맷 스트링을 제거한 새로운 URL 생성
-                String cleanURL = FORMAT_STRING_PATTERN.matcher(requestURI).replaceAll("");
+                System.out.println("CustomErrorReportValve: Handling 400 error for URI: " + request.getRequestURI());
 
-                // 리다이렉트
-
+                // Set the HTTP status code and content type
+                httpResponse.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                System.out.println("1");
                 httpResponse.setContentType("text/html; charset=UTF-8");
-                httpResponse.setCharacterEncoding("UTF-8");
-                httpResponse.getWriter().write(
-                    "<html><body>" +
-                    "<script>" +
-                    "alert('포맷스트링 문자열을 제외한 나머지 URL을 리다이렉트 합니다.');" +
-                    "window.location.href = '" + cleanURL + "';" +
-                    "</script>" +
-                    "</body></html>"
-                );
-//                response.sendRedirect(cleanURL);
-                return;
+                System.out.println("2");
+                // Define the path to the JSP file to be rendered
+                // Write the error page content directly
+                StringBuilder errorPageContent = new StringBuilder();
+                errorPageContent.append("<html>");
+                errorPageContent.append("<head><title>Bad Request</title></head>");
+                errorPageContent.append("<body>");
+                errorPageContent.append("<h1>Bad Request</h1>");
+                errorPageContent.append("<p>Your request could not be understood by the server.</p>");
+                errorPageContent.append("</body>");
+                errorPageContent.append("</html>");
+
+                // Write the content to the response
+                httpResponse.getWriter().write(errorPageContent.toString());
+                httpResponse.getWriter().flush();
+
+                System.out.println("Custom 400 error page rendered successfully for URI: " + request.getRequestURI());
             } catch (IOException e) {
-                e.printStackTrace(); // 리다이렉트 실패 시 로그 출력
+                e.printStackTrace();
             }
+        } else {
+            // Call the default error reporting method for other errors
+            super.report(request, response, throwable);
         }
-        
-        // 기본 400 에러 처리 (포맷 스트링이 없는 경우)
-        super.report(request, response, throwable);
     }
 }

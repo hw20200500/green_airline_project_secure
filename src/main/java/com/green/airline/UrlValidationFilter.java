@@ -39,7 +39,7 @@ public class UrlValidationFilter implements Filter {
 
         // fullURL에 원래 요청된 URL 저장
         String fullURL = requestURL.toString();
-        System.out.println("Original Full URL: " + fullURL);
+//        System.out.println("Original Full URL: " + fullURL);
 
         // %s와 같은 포맷 문자열이 있는지 확인
         if (FORMAT_STRING_PATTERN.matcher(fullURL).find()) {
@@ -53,7 +53,7 @@ public class UrlValidationFilter implements Filter {
                 httpResponse.getWriter().write(
                     "<html><body>" +
                     "<script>" +
-                    "alert('포맷스트링 문자열을 제외한 나머지 URL을 리다이렉트 합니다.');" +
+                    "alert('리다이렉트 합니다.');" +
                     "window.location.href = '" + cleanURL + "';" +
                     "</script>" +
                     "</body></html>"

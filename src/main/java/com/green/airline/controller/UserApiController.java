@@ -49,14 +49,14 @@ public class UserApiController {
 		String code = null;
 		try {
 			String realEmail = memberRepository.findEmailById(user.getId());
-			
+			// 입력한 메일 주소와 해당 계정 이용자의 저장된 메일 주소가 일치하지 않을 경우 오류 메시지 출력
 			if (!realEmail.equals(email)) {
 				System.out.println("실제 email::"+realEmail);
-	            return "different"; // 현재 페이지로 리다이렉트
+	            return "different"; 
 			}
-			code = emailService.sendPwCodeMessage(email);
-			System.out.println("인증코드 : " + code);
 			
+			// 랜덤값으로 만든 임시 비밀번호 이메일로 발송, 해당 비밀번호로 계정 이용자의 비밀번호 업데이트
+			code = emailService.sendPwCodeMessage(email);
 			userService.updateyPassword(code, user.getId());
 		} catch (Exception e) {
 			e.printStackTrace();
