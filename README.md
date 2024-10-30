@@ -180,12 +180,12 @@
 
 <table>
     <tr>
-        <th>수정 전</th>
-        <th>수정 후</th>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change XSS"></td>
-        <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change XSS"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change XSS"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change XSS"></td>
     </tr>
 </table>
 
@@ -194,12 +194,12 @@
 
 <table>
     <tr>
-        <th>수정 전</th>
-        <th>수정 후</th>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change Weak String"></td>
-        <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change Weak String"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change Weak String"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change Weak String"></td>
     </tr>
 </table>
 
@@ -209,12 +209,12 @@
 
 <table>
     <tr>
-        <th>수정 전</th>
-        <th>수정 후</th>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0" alt="Before Change Insufficient Authorization"></td>
-        <td><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243" alt="After Change Insufficient Authorization"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0" alt="Before Change Insufficient Authorization"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243" alt="After Change Insufficient Authorization"></td>
     </tr>
 </table>
 
@@ -224,12 +224,12 @@
 <br>
 <table>
     <tr>
-        <td>수정 전</td>
-        <td>수정 후</td>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/></td>
-        <td><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/></td>
     </tr>
 </table>
 
@@ -239,12 +239,12 @@
 <br>
 <table>
     <tr>
-        <td>수정 전</td>
-        <td>수정 후</td>
+        <th  width="50%" vertical-align="middle">수정 전</th>
+        <th  width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/></td>
-        <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
     </tr>
 </table>
 
@@ -253,12 +253,12 @@
 <br>
 <table>
     <tr>
-        <td>수정 전</td>
-        <td>수정 후</td>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
-        <td><img src=""/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
+        <td width="50%" vertical-align="middle"><img src=""/></td>
     </tr>
 </table>
 
@@ -268,12 +268,12 @@
 <br>
 <table>
     <tr>
-        <td>수정 전</td>
-        <td>수정 후</td>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/></td>
-        <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
     </tr>
 </table>
 
@@ -282,12 +282,12 @@
 <br>
 <table>
     <tr>
-        <td>수정 전</td>
-        <td>수정 후</td>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
-        <td><img src=""/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
+        <td width="50%" vertical-align="middle"><img src=""/></td>
     </tr>
 </table>
 
