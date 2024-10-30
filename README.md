@@ -158,9 +158,21 @@
 <br>
 
 <h3>03. 정보 누출</h3>
-<li>수정 대상: src/main/java/com/green/airline/handler/GlobalExceptionHandler.java</li>
-<li>모든 오류에 대해 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경</li>
+<li>수정 대상: src/main/java/com/green/airline/handler/exception/CustomErrorReportValve.java</li>
+<li>수정 전에는 400 오류가 발생할 경우 tomcat 자체의 오류 페이지가 나타나면서 tomcat 버전 노출이 되었으나, 400 오류가 발생할 경우 지정한 html 코드를 대신 출력하는 것으로 수정</li>
 <br>
+<table>
+    <tr>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
+    </tr>
+    <tr>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/062ee257-f52f-4c6c-9b06-1731c7ab9726"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/835ab74e-3ff1-4c0b-844a-50acd8b9b0e5"></td>
+    </tr>
+</table>
+<br>
+
 
 <h3>04. XSS</h3>
 <li>수정 대상: src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java</li>
