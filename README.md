@@ -135,7 +135,7 @@
     </tr>
     <tr>
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/fb207b12-aa8f-4648-8f8c-6af623948d33"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/33847031-ca11-4122-98a1-dd8df5df4fa8"></td>
     </tr>
 </table>
 <br>
