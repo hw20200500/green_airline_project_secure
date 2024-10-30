@@ -167,6 +167,7 @@
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java
    - 'tringEscapeUtils.escapeHtml()'을 이용하여 모든 입력한 값을 단순 문자열로 저장되도록 변경
 <br>
+<div>
     <table>
            <tr>
                <td>수정 전</td>
@@ -177,7 +178,7 @@
                <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/></td>
            </tr>
        </table>
-
+</div>
 
      <br><br>
 <h3>05. 약한 문자열 강도</h3>
