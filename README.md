@@ -181,7 +181,7 @@
 
      <br><br>
 <h3>05. 약한 문자열 강도</h3>
-   - 수정 대상 : 
+   <p>- 수정 대상 : </p>
 <br>
    <table>
            <tr>
@@ -248,9 +248,9 @@
 
 <br><br>
 <h3>11. 자동화 공격</h3>
-   - 수정 대상 : 
+   <p>- 수정 대상 : </p>
 <br>
-   <table>
+       <table>
            <tr>
                <td>수정 전</td>
                <td>수정 후</td>
@@ -278,6 +278,8 @@
                <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
            </tr>
        </table>
+
+       
 <br><br>
 <h3>14. 파일 다운로드</h3>
    - 수정 대상 : 
