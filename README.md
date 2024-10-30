@@ -126,8 +126,7 @@
 ## 2️⃣ 시큐어 코딩 결과
 <h3>01. 운영체제 명령 실행</h3>
 <li>수정 대상: app.py</li>
-<li>Flask의 render_template_string을 render_template으로 변경</li>
-<img src="https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff" alt="Original Code">
+<li>Flask의 render_template_string을 escape으로 변경하여 사용자 입력을 직접적으로 템플릿에 사용하지 않도록 함.</li>
 <br>
 <table>
     <tr>
@@ -136,7 +135,7 @@
     </tr>
     <tr>
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758"></td>
-        <td width="50%" vertical-align="middle">수정 후 이미지</td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/33847031-ca11-4122-98a1-dd8df5df4fa8"></td>
     </tr>
 </table>
 <br>
@@ -191,7 +190,9 @@
 <br>
 
 <h3>05. 약한 문자열 강도</h3>
-<li>수정 대상: </li>
+<li>수정 대상: src/main/java/com/green/airline/controller/UserApiController.java, src/main/java/com/green/airline/controller/UserController.java</li>
+<li>기존에는 연속된 글자로 아이디, 비밀번호를 입력하여 회원가입할 수 있었으나, 그러지 못하도록 자바에 관련 함수 및 코드 추가</li>
+<li>특히 비밀번호의 경우 아이디와 동일하거나, 특수문자, 숫자, 알파벳을 모두 사용하지 않으면 회원가입 못하도록 설정</li>
 <br>
 <table>
     <tr>
@@ -199,11 +200,12 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/a2ba72d1-0d6f-4e5a-91ba-2896dbe23490"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/2e8dcbcb-5df4-4203-9b93-2164172649d6"></td>
     </tr>
 </table>
 <br>
+
 
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
 <li>수정 대상: src/main/java/com/green/airline/utils/Define.java</li>
@@ -254,18 +256,8 @@
 <br>
 
 <h3>11. 자동화 공격</h3>
-<li>수정 대상 :</li>
-<br>
-<table>
-    <tr>
-        <th width="50%" vertical-align="middle">수정 전</th>
-        <th width="50%" vertical-align="middle">수정 후</th>
-    </tr>
-    <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
-        <td width="50%" vertical-align="middle"><img src=""/></td>
-    </tr>
-</table>
+<li>자동화 공격은 시큐어 코딩보다는 IDS/IPS를 이용하는 것이 더 효율적이기에 특별히 이와 관련된 코드를 수정하지 않았음.</li>
+
 <br>
 
 <h3>12. 프로세스 검증 누락</h3>
@@ -285,7 +277,8 @@
 <br>
 
 <h3>14. 파일 다운로드</h3>
-<li>수정 대상 :</li>
+<li>수정 대상 : src/main/java/com/green/airline/controller/BoardController.java</li>
+<li>기존에는 fileName 파라미터로 다운받을 파일의 경로를 직접 받아왔기에 다운로드 경로를 공격자가 변경할 수 있었으나, 다운받을 파일의 경로를 게시글 id로 DB에 저장되어 있는 파일의 경로를 가져와서 다운로드받아 다운로드 취약점이 발생하지 않도록 변경</li>
 <br>
 <table>
     <tr>
@@ -294,7 +287,7 @@
     </tr>
     <tr>
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
-        <td width="50%" vertical-align="middle"><img src=""/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/eb005724-3313-4ee3-a5de-4f8e73364a68"/></td>
     </tr>
 </table>
 
