@@ -216,6 +216,77 @@
     </tr>
 </table>
 
-<!-- Remaining sections follow similarly -->
+<h3>07. 취약한 패스워드 복구</h3>
+- 수정 대상 : src/main/java/com/green/airline/controller/UserApiController.java, src/main/webapp/WEB-INF/view/user/userPwSearch.jsp
+- 기존의 이메일 인증한 뒤, jsp에서 자바스크립트로 약한 문자열로 임시 비밀번호를 발급해주는 방식에서 자바 백엔드에서 랜덤 문자열로 임시 비밀번호를 발급하는 방식으로 변경
+<br>
+<table>
+    <tr>
+        <td>수정 전</td>
+        <td>수정 후</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/></td>
+        <td><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/></td>
+    </tr>
+</table>
+
+<h3>08. 악성 콘텐츠, 13. 파일 업로드</h3>
+- 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/controller/ImageUploadController.java
+- 모든 유형의 파일이 업로드 가능했던 기존 방식에서 jpg, png, jpeg 파일만 업로드 가능하도록 수정
+<br>
+<table>
+    <tr>
+        <td>수정 전</td>
+        <td>수정 후</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/></td>
+        <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
+    </tr>
+</table>
+
+<h3>11. 자동화 공격</h3>
+<p>- 수정 대상 :</p>
+<br>
+<table>
+    <tr>
+        <td>수정 전</td>
+        <td>수정 후</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
+        <td><img src=""/></td>
+    </tr>
+</table>
+
+<h3>12. 프로세스 검증 누락</h3>
+- 수정 대상 : src/main/java/com/green/airline/controller/ProductController.java
+- /buyProduct에 접근할 때, DB에 저장된 실제 물품 가격과 전달받은 구매 물품의 가격이 일치하지 않으면 '가격 변조가 탐지되어 결제가 불가합니다.'라는 경고창 출력 후 결제 프로세스 중단하도록 수정
+<br>
+<table>
+    <tr>
+        <td>수정 전</td>
+        <td>수정 후</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/></td>
+        <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
+    </tr>
+</table>
+
+<h3>14. 파일 다운로드</h3>
+- 수정 대상 :
+<br>
+<table>
+    <tr>
+        <td>수정 전</td>
+        <td>수정 후</td>
+    </tr>
+    <tr>
+        <td><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
+        <td><img src=""/></td>
+    </tr>
+</table>
 
 
