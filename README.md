@@ -125,8 +125,8 @@
 
 ## 2️⃣ 시큐어 코딩 결과
 <h3>01. 운영체제 명령 실행</h3>
-+ 수정 대상: app.py</p>
-+ Flask의 render_template_string을 render_template으로 변경
+<li>수정 대상: app.py</li>
+<li>Flask의 render_template_string을 render_template으로 변경</li>
 <img src="https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff" alt="Original Code">
 
 <table>
