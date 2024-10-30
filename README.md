@@ -124,19 +124,21 @@
 <br>
 
 ## 2️⃣ 시큐어 코딩 결과
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    td {
-        width: 50%;
-        text-align: center;
-        vertical-align: middle;
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
-</style>
+<head>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            width: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
 <h3>01. 운영체제 명령 실행</h3>
 <p>- 수정 대상: app.py</p>
 <p>Flask의 render_template_string을 render_template으로 변경</p>
