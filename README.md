@@ -145,8 +145,8 @@
 <h3>02. SQL 인젝션</h3>
    - 수정 대상 : src\main\resources\mapper\*.xml
    - 기존의 동적 파라미터 바인딩(예: '&{keyword}')에서 정적 파라미터 바인딩(예: #{keyword})으로 변경
-
-    <table>
+     
+     <table>
            <tr>
                <td>수정 전</td>
                <td>수정 후</td>
@@ -156,8 +156,8 @@
                <td><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105"/></td>
            </tr>
        </table>
-     
-     
+
+
 
 <h3>03. 정보 누출</h3>
    - 수정 대상 : src/main/java/com/green/airline/handler/GlobalExceptionHandler.java
@@ -173,10 +173,12 @@
                <td>수정 후</td>
            </tr>
            <tr>
-           <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/></td>
+               <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/></td>
                <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/></td>
            </tr>
        </table>
+
+
      
 <h3>05. 약한 문자열 강도</h3>
    - 수정 대상 : 
