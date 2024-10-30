@@ -152,8 +152,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0"/>
-               <td><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105"/>
+               <td><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0"/></td>
+               <td><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105"/></td>
            </tr>
        </table>
      
@@ -173,8 +173,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-           <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/>
-               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/>
+           <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/></td>
+               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/></td>
            </tr>
        </table>
      
@@ -187,11 +187,12 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/>
-               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/>
+               <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/></td>
+               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/></td>
 
            </tr>
        </table>
+
 
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
    - 수정 대상 : src/main/java/com/green/airline/utils/Define.java
@@ -203,10 +204,11 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0"/>
-               <td><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243"/>
+               <td><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0"/></td>
+               <td><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243"/></td>
            </tr>
        </table>
+
 
 
 <h3>07. 취약한 패스워드 복구</h3>
@@ -219,10 +221,11 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/>
-               <td><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/>
+               <td><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/></td>
+               <td><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/></td>
            </tr>
        </table>
+
 
 
 <h3>08. 악성 콘텐츠, 13. 파일 업로드</h3>
@@ -235,10 +238,12 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/>
-               <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/>
+               <td><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/></td>
+               <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/></td>
            </tr>
        </table>
+
+
 
 <h3>11. 자동화 공격</h3>
    - 수정 대상 : 
@@ -249,11 +254,13 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/>
-               <td><img src=""/>
+               <td><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
+               <td><img src=""/></td>
 
            </tr>
        </table>
+
+
 
 <h3>12. 프로세스 검증 누락</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/ProductController.java
@@ -265,8 +272,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/>
-               <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/>
+               <td><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/></td>
+               <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/></td>
            </tr>
        </table>
 
@@ -279,8 +286,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/>
-               <td><img src=""/>
+               <td><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
+               <td><img src=""/></td>
 
            </tr>
        </table>
