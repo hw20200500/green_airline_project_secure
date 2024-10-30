@@ -150,8 +150,8 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0" alt="Before Change SQL Injection"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105" alt="After Change SQL Injection"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105"></td>
     </tr>
 </table>
 <br>
@@ -169,8 +169,8 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change XSS"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change XSS"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"></td>
     </tr>
 </table>
 <br>
@@ -183,8 +183,8 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53" alt="Before Change Weak String"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686" alt="After Change Weak String"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"></td>
     </tr>
 </table>
 <br>
@@ -198,8 +198,8 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0" alt="Before Change Insufficient Authorization"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243" alt="After Change Insufficient Authorization"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243"></td>
     </tr>
 </table>
 <br>
