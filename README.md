@@ -257,18 +257,8 @@
 <br>
 
 <h3>11. 자동화 공격</h3>
-<li>수정 대상 :</li>
-<br>
-<table>
-    <tr>
-        <th width="50%" vertical-align="middle">수정 전</th>
-        <th width="50%" vertical-align="middle">수정 후</th>
-    </tr>
-    <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/></td>
-        <td width="50%" vertical-align="middle"><img src=""/></td>
-    </tr>
-</table>
+<li>자동화 공격은 시큐어 코딩보다는 IDS/IPS를 이용하는 것이 더 효율적이기에 특별히 이와 관련된 코드를 수정하지 않았음.</li>
+
 <br>
 
 <h3>12. 프로세스 검증 누락</h3>
@@ -288,7 +278,8 @@
 <br>
 
 <h3>14. 파일 다운로드</h3>
-<li>수정 대상 :</li>
+<li>수정 대상 : src/main/java/com/green/airline/controller/BoardController.java</li>
+<li>기존에는 fileName 파라미터로 다운받을 파일의 경로를 직접 받아왔기에 다운로드 경로를 공격자가 변경할 수 있었으나, 다운받을 파일의 경로를 게시글 id로 DB에 저장되어 있는 파일의 경로를 가져와서 다운로드받아 다운로드 취약점이 발생하지 않도록 변경</li>
 <br>
 <table>
     <tr>
@@ -297,7 +288,7 @@
     </tr>
     <tr>
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/></td>
-        <td width="50%" vertical-align="middle"><img src=""/></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/eb005724-3313-4ee3-a5de-4f8e73364a68"/></td>
     </tr>
 </table>
 
