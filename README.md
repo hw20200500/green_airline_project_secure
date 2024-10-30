@@ -180,10 +180,10 @@
        </table>
 </div>
 
-     <br><br>
+<br><br>
 <h3>05. 약한 문자열 강도</h3>
-   <p>- 수정 대상 : </p>
-<br>
+   - 수정 대상 : 
+    <br>
    <table>
            <tr>
                <td>수정 전</td>
@@ -196,7 +196,7 @@
            </tr>
        </table>
 
-<br><br>
+    <br><br>
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
    - 수정 대상 : src/main/java/com/green/airline/utils/Define.java
    - 관리자로 로그인 후 접근할 수 있는 페이지 목록에 공지사항 게시글 작성(/notice/write), 수정(/notice/noticeUpdate), 삭제(/notice/noticeDelete), 관리자만 접근 가능한 전체 고객의 말씀 게시글 목록(/voc/list/not/*, /voc/list/processed/*) URI 추가 
