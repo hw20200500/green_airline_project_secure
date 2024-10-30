@@ -9,7 +9,7 @@
 - 해당 프로젝트는 보안에 취약하게 제작한 green_airline_project 프로젝트를 대상으로 시큐어 코딩을 진행한 <b>안전한 버전</b>의 웹사이트 코드입니다.
 -   원래의 오픈소스 URL : https://github.com/seoyounglee0105/green_airline_project.git
 -   취약한 버전의 웹 프로젝트 URL : https://github.com/hw20200500/green_airline_project.git
-- 프로젝트 기간 : 2024년 10월 2일 ~ 
+- 프로젝트 기간 : 2024년 10월 2일 ~ 10월 30일
 
 
 <br> 
