@@ -126,8 +126,7 @@
 ## 2️⃣ 시큐어 코딩 결과
 <h3>01. 운영체제 명령 실행</h3>
 <li>수정 대상: app.py</li>
-<li>Flask의 render_template_string을 render_template으로 변경</li>
-<img src="https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff" alt="Original Code">
+<li>Flask의 render_template_string을 escape으로 변경하여 사용자 입력을 직접적으로 템플릿에 사용하지 않도록 함.</li>
 <br>
 <table>
     <tr>
@@ -136,7 +135,7 @@
     </tr>
     <tr>
         <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758"></td>
-        <td width="50%" vertical-align="middle">수정 후 이미지</td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/fb207b12-aa8f-4648-8f8c-6af623948d33"></td>
     </tr>
 </table>
 <br>
