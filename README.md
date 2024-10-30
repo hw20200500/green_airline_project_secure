@@ -128,7 +128,7 @@
 <h3>01. 운영체제 명령 실행</h3>
    - 수정 대상 : app.py
    - Flask의 render_template_string을 render_template으로 변경 <br>
-       ![image](https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff)
+   <img src="https://github.com/user-attachments/assets/318dd94b-6cf3-4742-8326-a250caa95aff"/>
    
    <table>
        <tr>
@@ -136,7 +136,7 @@
            <td>수정 후</td>
        </tr>
        <tr>
-           <td>![image](https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758)</td>
+           <td><img src="https://github.com/user-attachments/assets/e37f0d8e-8663-4bdd-bc4e-37fb53384758"/></td>
            <td>수정 후</td>
        </tr>
    </table>
@@ -152,8 +152,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0)</td>
-               <td>![image](https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105)</td>
+               <td><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0"/>
+               <td><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105"/>
            </tr>
        </table>
      
@@ -173,14 +173,13 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53)</td>
-               <td>![image](https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686)</td>
+           <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/>
+               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/>
            </tr>
        </table>
      
 <h3>05. 약한 문자열 강도</h3>
-   - 수정 대상 : src/main/java/com/green/airline/controller/UserApiController.java, src/main/webapp/WEB-INF/view/user/userPwSearch.jsp
-   - 기존의 이메일 인증한 뒤, jsp에서 자바스크립트로 약한 문자열로 임시 비밀번호로 발급해주는 것에서 자바 백엔드에서 사용자 이메일 주소 입력하면 랜덤 문자열로 임시 비밀번호 발급해주는 것으로 변경
+   - 수정 대상 : 
 
    <table>
            <tr>
@@ -188,8 +187,9 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53)</td>
-               <td>![image](https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686)</td>
+               <td><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"/>
+               <td><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"/>
+
            </tr>
        </table>
 
@@ -203,8 +203,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0)</td>
-               <td>![image](https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243)</td>
+               <td><img src="https://github.com/user-attachments/assets/e314bb7d-bfe5-4a3b-9830-eaa9010dced0"/>
+               <td><img src="https://github.com/user-attachments/assets/96084c11-106c-495e-a749-2f3527dec243"/>
            </tr>
        </table>
 
@@ -219,8 +219,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5)</td>
-               <td>![image](https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47)</td>
+               <td><img src="https://github.com/user-attachments/assets/a7756017-3a03-4ca2-a53c-6817afe023c5"/>
+               <td><img src="https://github.com/user-attachments/assets/994d789f-6af2-4bef-8ed1-922f19dd6d47"/>
            </tr>
        </table>
 
@@ -235,8 +235,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130)</td>
-               <td>![image](https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef)</td>
+               <td><img src="https://github.com/user-attachments/assets/01bab206-699d-4e0f-8dde-9f4d67c73130"/>
+               <td><img src="https://github.com/user-attachments/assets/4cabbc8c-a374-4344-a0dc-059a2ac58fef"/>
            </tr>
        </table>
 
@@ -249,8 +249,9 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576)</td>
-               <td></td>
+               <td><img src="https://github.com/user-attachments/assets/17fbda86-f5e3-4b2a-a95b-2f1d09ef5576"/>
+               <td><img src=""/>
+
            </tr>
        </table>
 
@@ -264,8 +265,8 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd)</td>
-               <td>![image](https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500)</td>
+               <td><img src="https://github.com/user-attachments/assets/32745158-9d37-43a8-8738-8438441f01dd"/>
+               <td><img src="https://github.com/user-attachments/assets/10b558b3-b4b4-47ad-bebf-54e201c7d500"/>
            </tr>
        </table>
 
@@ -278,8 +279,9 @@
                <td>수정 후</td>
            </tr>
            <tr>
-               <td>![image](https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6)</td>
-               <td></td>
+               <td><img src="https://github.com/user-attachments/assets/155f300e-3d73-4db6-a71e-c9195f6fd5f6"/>
+               <td><img src=""/>
+
            </tr>
        </table>
 
