@@ -145,7 +145,7 @@
 <h3>02. SQL 인젝션</h3>
    - 수정 대상 : src\main\resources\mapper\*.xml
    - 기존의 동적 파라미터 바인딩(예: '&{keyword}')에서 정적 파라미터 바인딩(예: #{keyword})으로 변경
-     
+     <br>
      <table>
            <tr>
                <td>수정 전</td>
@@ -162,11 +162,11 @@
 <h3>03. 정보 누출</h3>
    - 수정 대상 : src/main/java/com/green/airline/handler/GlobalExceptionHandler.java
    - 모든 오류에 대해서 지정한 오류 페이지(layout/errorPage)로 이동하도록 변경
-
+<br>
 <h3>04. XSS</h3>
    - 수정 대상 : src/main/java/com/green/airline/controller/BoardController.java, src/main/java/com/green/airline/XssFilter.java
    - 'tringEscapeUtils.escapeHtml()'을 이용하여 모든 입력한 값을 단순 문자열로 저장되도록 변경
-
+<br>
     <table>
            <tr>
                <td>수정 전</td>
