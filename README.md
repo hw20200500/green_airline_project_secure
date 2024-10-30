@@ -161,12 +161,12 @@
 
 <table>
     <tr>
-        <th>수정 전</th>
-        <th>수정 후</th>
+        <th width="50%" vertical-align="middle">수정 전</th>
+        <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0" alt="Before Change SQL Injection"></td>
-        <td><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105" alt="After Change SQL Injection"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/e4271ab9-68e4-419f-8276-635137f266d0" alt="Before Change SQL Injection"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/1f64db92-e2d6-40e6-8474-68e3a82d6105" alt="After Change SQL Injection"></td>
     </tr>
 </table>
 
