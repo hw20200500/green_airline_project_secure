@@ -191,7 +191,9 @@
 <br>
 
 <h3>05. 약한 문자열 강도</h3>
-<li>수정 대상: </li>
+<li>수정 대상: src/main/java/com/green/airline/controller/UserApiController.java, src/main/java/com/green/airline/controller/UserController.java</li>
+<li>기존에는 연속된 글자로 아이디, 비밀번호를 입력하여 회원가입할 수 있었으나, 그러지 못하도록 자바에 관련 함수 및 코드 추가</li>
+<li>특히 비밀번호의 경우 아이디와 동일하거나, 특수문자, 숫자, 알파벳을 모두 사용하지 않으면 회원가입 못하도록 설정</li>
 <br>
 <table>
     <tr>
@@ -199,11 +201,12 @@
         <th width="50%" vertical-align="middle">수정 후</th>
     </tr>
     <tr>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/0312b742-b752-4357-b411-4cf6e0537a53"></td>
-        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/310d5d5d-6f2a-4e01-beb9-ed915adae686"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/a2ba72d1-0d6f-4e5a-91ba-2896dbe23490"></td>
+        <td width="50%" vertical-align="middle"><img src="https://github.com/user-attachments/assets/2e8dcbcb-5df4-4203-9b93-2164172649d6"></td>
     </tr>
 </table>
 <br>
+
 
 <h3>06. 불충분한 인증, 10. 불충분한 인가</h3>
 <li>수정 대상: src/main/java/com/green/airline/utils/Define.java</li>
